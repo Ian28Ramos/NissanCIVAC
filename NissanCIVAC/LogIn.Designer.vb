@@ -22,37 +22,37 @@ Partial Class LogIn
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button_Entrar = New System.Windows.Forms.Button()
+        Me.Button_Salir = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Usuario = New System.Windows.Forms.TextBox()
+        Me.Pswd = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'Button_Entrar
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(102, 388)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 28)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Entrar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button_Entrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_Entrar.Location = New System.Drawing.Point(102, 388)
+        Me.Button_Entrar.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button_Entrar.Name = "Button_Entrar"
+        Me.Button_Entrar.Size = New System.Drawing.Size(100, 28)
+        Me.Button_Entrar.TabIndex = 0
+        Me.Button_Entrar.Text = "Entrar"
+        Me.Button_Entrar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Button_Salir
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(265, 388)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 28)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Salir"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button_Salir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_Salir.Location = New System.Drawing.Point(265, 388)
+        Me.Button_Salir.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button_Salir.Name = "Button_Salir"
+        Me.Button_Salir.Size = New System.Drawing.Size(100, 28)
+        Me.Button_Salir.TabIndex = 1
+        Me.Button_Salir.Text = "Salir"
+        Me.Button_Salir.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -76,23 +76,22 @@ Partial Class LogIn
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Contraseña:"
         '
-        'TextBox1
+        'Usuario
         '
-        Me.TextBox1.Location = New System.Drawing.Point(187, 208)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(177, 22)
-        Me.TextBox1.TabIndex = 4
+        Me.Usuario.Location = New System.Drawing.Point(187, 208)
+        Me.Usuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.Usuario.Name = "Usuario"
+        Me.Usuario.Size = New System.Drawing.Size(177, 22)
+        Me.Usuario.TabIndex = 4
         '
-        'TextBox2
+        'Pswd
         '
-        Me.TextBox2.Location = New System.Drawing.Point(187, 268)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(177, 22)
-        Me.TextBox2.TabIndex = 5
-        Me.TextBox2.UseSystemPasswordChar = True
+        Me.Pswd.Location = New System.Drawing.Point(187, 268)
+        Me.Pswd.Margin = New System.Windows.Forms.Padding(4)
+        Me.Pswd.Name = "Pswd"
+        Me.Pswd.Size = New System.Drawing.Size(177, 22)
+        Me.Pswd.TabIndex = 5
+        Me.Pswd.UseSystemPasswordChar = True
         '
         'PictureBox1
         '
@@ -112,12 +111,12 @@ Partial Class LogIn
         Me.ClientSize = New System.Drawing.Size(456, 476)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Pswd)
+        Me.Controls.Add(Me.Usuario)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button_Salir)
+        Me.Controls.Add(Me.Button_Entrar)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "LogIn"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -128,11 +127,11 @@ Partial Class LogIn
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Button_Entrar As Button
+    Friend WithEvents Button_Salir As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Usuario As TextBox
+    Friend WithEvents Pswd As TextBox
     Friend WithEvents PictureBox1 As PictureBox
 End Class
