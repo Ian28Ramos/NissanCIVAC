@@ -1,5 +1,4 @@
-﻿
-Imports MySql.Data.MySqlClient 'Libreria de conexión a la BD
+﻿Imports MySql.Data.MySqlClient 'Libreria de conexión a la BD
 
 Public Class LogIn
 
@@ -22,7 +21,7 @@ Public Class LogIn
         Try
             Conn.Open() 'Abrimos la BD
         Catch ex As Exception
-            MsgBox("No se puede conectar con la Base de datos por: " & ex.Message)
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -40,6 +39,7 @@ Public Class LogIn
             DS = New DataSet
             DA.Fill(DS, "Usuarios")
             lista = DS.Tables("Usuarios").Rows.Count
+            Conn.Close()
         Else
             MsgBox("Porfavor llena todos los campos solicitados")
         End If

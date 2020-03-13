@@ -34,6 +34,10 @@ Partial Class Usuarios
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Contraseña = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -78,28 +82,28 @@ Partial Class Usuarios
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(229, 45)
+        Me.TextBox1.Location = New System.Drawing.Point(245, 45)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(172, 22)
         Me.TextBox1.TabIndex = 4
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(229, 87)
+        Me.TextBox2.Location = New System.Drawing.Point(245, 87)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(172, 22)
         Me.TextBox2.TabIndex = 5
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(229, 123)
+        Me.TextBox3.Location = New System.Drawing.Point(245, 123)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(172, 22)
         Me.TextBox3.TabIndex = 6
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(229, 163)
+        Me.TextBox4.Location = New System.Drawing.Point(245, 163)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(172, 22)
         Me.TextBox4.TabIndex = 7
@@ -116,7 +120,7 @@ Partial Class Usuarios
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(457, 143)
+        Me.Button2.Location = New System.Drawing.Point(457, 237)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(107, 42)
         Me.Button2.TabIndex = 9
@@ -126,19 +130,57 @@ Partial Class Usuarios
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(457, 31)
+        Me.Button3.Location = New System.Drawing.Point(457, 32)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(80, 36)
         Me.Button3.TabIndex = 10
         Me.Button3.Text = "Eliminar"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Contraseña
+        '
+        Me.Contraseña.AutoSize = True
+        Me.Contraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Contraseña.Location = New System.Drawing.Point(44, 210)
+        Me.Contraseña.Name = "Contraseña"
+        Me.Contraseña.Size = New System.Drawing.Size(107, 20)
+        Me.Contraseña.TabIndex = 11
+        Me.Contraseña.Text = "Contraseña:"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(245, 208)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(172, 22)
+        Me.TextBox5.TabIndex = 12
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(44, 259)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(168, 20)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Repetir contraseña:"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(245, 257)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(172, 22)
+        Me.TextBox6.TabIndex = 14
+        '
         'Usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(681, 243)
+        Me.ClientSize = New System.Drawing.Size(681, 324)
         Me.ControlBox = False
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.Contraseña)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -170,4 +212,8 @@ Partial Class Usuarios
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Contraseña As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBox6 As TextBox
 End Class
