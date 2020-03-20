@@ -48,7 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>NissanLogo.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\NissanLogo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -84,6 +84,7 @@
     <Compile Include="Entradas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VaGlo.vb" />
     <Compile Include="Reportes.Designer.vb">
       <DependentUpon>Reportes.vb</DependentUpon>
     </Compile>
@@ -172,7 +173,7 @@
     <None Include="Resources\5.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NissanLogo.ico" />
+    <Content Include="Resources\NissanLogo.ico" />
     <None Include="Resources\nissan-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
