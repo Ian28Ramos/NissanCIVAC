@@ -4,12 +4,14 @@ Public Class LogIn
 
 
     Dim F As New VaGlo
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button_Salir.Click
         End
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_Entrar.Click
         F.Conexion()
+        NomUsuario()
         Validar()
     End Sub
 
@@ -47,4 +49,20 @@ Public Class LogIn
         MenuPrincipal.Show()
         Me.Hide()
     End Sub
+
+    Public Function NomUsuario() 'Asigna valor para identificar usuario
+        Dim cmd As String = "SELECT Nombre FROM Usuarios WHERE ID_Usuario='" & Usuario.Text & "'"
+        Dim DA = New MySqlDataAdapter(cmd, F.Conn)
+        Dim DS = New DataSet
+        DA.Fill(DS, "Usuarios")
+        Dim lista As Byte = DS.Tables("Usuarios").Rows.Count
+
+        If lista <> 0 Then
+            MenuPrincipal.Usutxt.Text = DS.Tables("Usuarios").Rows(0).Item("Nombre")
+        Else
+            MsgBox("Error")
+        End If
+        Return 0
+    End Function
+
 End Class

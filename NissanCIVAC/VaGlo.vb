@@ -3,6 +3,7 @@ Public Class VaGlo
 
     Public StrConexion As String = "Server=127.0.0.1; Database=nissancivac; Uid=root; pwd=1013p362; port=3306"
     Public Conn As New MySqlConnection(StrConexion)
+    Public Us As String
 
     Public Sub Conexion() 'conexion a la BD
         Try
@@ -11,5 +12,7 @@ Public Class VaGlo
             MsgBox(ex.Message)
         End Try
     End Sub
+
+
 
 End Class

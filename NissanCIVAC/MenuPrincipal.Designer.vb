@@ -28,8 +28,8 @@ Partial Class MenuPrincipal
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Usutxt = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -46,7 +46,7 @@ Partial Class MenuPrincipal
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(16, 219)
+        Me.Button1.Location = New System.Drawing.Point(13, 187)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(169, 28)
@@ -57,7 +57,7 @@ Partial Class MenuPrincipal
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(16, 277)
+        Me.Button2.Location = New System.Drawing.Point(13, 223)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(117, 28)
@@ -78,7 +78,7 @@ Partial Class MenuPrincipal
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(16, 381)
+        Me.Button4.Location = New System.Drawing.Point(13, 294)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(207, 34)
@@ -86,35 +86,33 @@ Partial Class MenuPrincipal
         Me.Button4.Text = "Gestionar usuarios"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(171, 140)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(178, 20)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = """Nombre del usuario"""
-        '
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(16, 330)
+        Me.Button5.Location = New System.Drawing.Point(13, 258)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(117, 29)
         Me.Button5.TabIndex = 7
         Me.Button5.Text = "Reportes"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Usutxt
+        '
+        Me.Usutxt.AutoSize = True
+        Me.Usutxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Usutxt.Location = New System.Drawing.Point(233, 131)
+        Me.Usutxt.Name = "Usutxt"
+        Me.Usutxt.Size = New System.Drawing.Size(0, 20)
+        Me.Usutxt.TabIndex = 8
+        '
         'MenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(538, 455)
+        Me.ClientSize = New System.Drawing.Size(538, 369)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Usutxt)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -135,6 +133,6 @@ Partial Class MenuPrincipal
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents Label2 As Label
     Friend WithEvents Button5 As Button
+    Friend WithEvents Usutxt As Label
 End Class
