@@ -26,7 +26,7 @@ Public Class Usuarios
                     Dim Cmd As New MySqlCommand(ComSql, F.Conn)
                     READER = Cmd.ExecuteReader()
 
-                    MsgBox("El usaurio se agregó con éxito")
+                    MsgBox("El usuario se agregó con éxito")
                     Limpiar()
                     F.Conn.Close()
                 Catch ex As Exception
@@ -63,7 +63,11 @@ Public Class Usuarios
     End Sub
 
     Private Sub DropButton_Click(sender As Object, e As EventArgs) Handles DropButton.Click
-        Eliminar()
+        Dim R
+        MsgBox("¿Esta seguro de eliminar a este usuario?", vbOKCancel + vbSystemModal)
+        If R = vbOK Then
+            Eliminar()
+        End If
     End Sub
 
     Private Sub AddButton_Click(sender As Object, e As EventArgs) Handles AddButton.Click

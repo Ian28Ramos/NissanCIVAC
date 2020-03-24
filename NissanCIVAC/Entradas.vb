@@ -105,7 +105,7 @@ Public Class Entradas
     End Sub
     Private Sub DescPieza() 'Obtencion de la descripcion de la pieza automaticamente
         Try
-            If NoParte.Text <> "" And NoParte.Text.Length >= 9 Then
+            If NoParte.Text <> "" And NoParte.Text.Length >= 8 And NoParte.Text <> "<Seleccione una opción>" Then
                 If F.Conn.Equals(0) Then
                     F.Conn.Open()
                 End If
@@ -113,19 +113,19 @@ Public Class Entradas
                 ComSql = "SELECT Descripcion FROM Piezas WHERE ID_Pieza='" & NoParte.Text & "'"
                 DA = New MySqlDataAdapter(ComSql, F.Conn)
                 DS = New DataSet
-                DA.Fill(DS, "Entradas")
-                lista = DS.Tables("Entradas").Rows.Count
+                DA.Fill(DS, "Piezas")
+                lista = DS.Tables("Piezas").Rows.Count
 
                 If lista <> 0 Then
-                    Desc.Text = DS.Tables("Entradas").Rows(0).Item("Descripcion")
+                    Desc.Text = DS.Tables("Piezas").Rows(0).Item("Descripcion")
                     F.Conn.Close()
                 Else
-                    MsgBox("Verifique el Número de pieza")
-                        F.Conn.Close()
-                    End If
-                Else
-
+                    MsgBox("Verifique el número de pieza")
+                    F.Conn.Close()
                 End If
+            Else
+
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -189,6 +189,7 @@ Public Class Entradas
 
         ArRe.DataSource = DS.Tables(0)
         ArRe.DisplayMember = "ID_Area"
+        ArRe.Text = "<Seleccione una opción>"
     End Sub
 
     Private Sub BoxParte()
@@ -199,6 +200,7 @@ Public Class Entradas
 
         NoParte.DataSource = DS.Tables(0)
         NoParte.DisplayMember = "ID_Pieza"
+        NoParte.Text = "<Seleccione una opción>"
     End Sub
 
 End Class

@@ -30,6 +30,7 @@ Partial Class MenuPrincipal
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Usutxt = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -78,7 +79,7 @@ Partial Class MenuPrincipal
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(13, 294)
+        Me.Button4.Location = New System.Drawing.Point(12, 329)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(207, 34)
@@ -89,7 +90,7 @@ Partial Class MenuPrincipal
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(13, 258)
+        Me.Button5.Location = New System.Drawing.Point(12, 258)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(117, 29)
         Me.Button5.TabIndex = 7
@@ -105,12 +106,23 @@ Partial Class MenuPrincipal
         Me.Usutxt.Size = New System.Drawing.Size(0, 20)
         Me.Usutxt.TabIndex = 8
         '
+        'Button6
+        '
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(12, 293)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(207, 29)
+        Me.Button6.TabIndex = 9
+        Me.Button6.Text = "Gestionar piezas"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'MenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(538, 369)
+        Me.ClientSize = New System.Drawing.Size(538, 400)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Usutxt)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -135,4 +147,5 @@ Partial Class MenuPrincipal
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Usutxt As Label
+    Friend WithEvents Button6 As Button
 End Class

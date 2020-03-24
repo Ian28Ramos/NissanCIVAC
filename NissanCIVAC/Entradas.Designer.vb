@@ -131,6 +131,7 @@ Partial Class Entradas
         Me.NoParte.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.NoParte.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.NoParte.DropDownWidth = 150
+        Me.NoParte.ForeColor = System.Drawing.SystemColors.WindowText
         Me.NoParte.FormattingEnabled = True
         Me.NoParte.Location = New System.Drawing.Point(226, 149)
         Me.NoParte.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)

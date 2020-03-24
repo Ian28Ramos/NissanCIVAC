@@ -69,6 +69,7 @@ Public Class Salidas
 
         RECBox.DataSource = DS.Tables(0)
         RECBox.DisplayMember = "ID_Entrada"
+        RECBox.Text = "<Seleccione una opción>"
     End Sub
 
     Private Sub Cons_Click(sender As Object, e As EventArgs) Handles Cons.Click

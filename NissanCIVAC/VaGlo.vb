@@ -13,6 +13,4 @@ Public Class VaGlo
         End Try
     End Sub
 
-
-
 End Class

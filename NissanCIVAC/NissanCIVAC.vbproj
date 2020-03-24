@@ -84,6 +84,12 @@
     <Compile Include="Entradas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GesPiezas.Designer.vb">
+      <DependentUpon>GesPiezas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GesPiezas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VaGlo.vb" />
     <Compile Include="Reportes.Designer.vb">
       <DependentUpon>Reportes.vb</DependentUpon>
@@ -132,6 +138,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GesPiezas.resx">
+      <DependentUpon>GesPiezas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.vb</DependentUpon>
     </EmbeddedResource>
