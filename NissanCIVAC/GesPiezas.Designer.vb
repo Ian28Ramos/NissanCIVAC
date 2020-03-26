@@ -36,7 +36,8 @@ Partial Class GesPiezas
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DesBox = New System.Windows.Forms.ComboBox()
         Me.NPBox = New System.Windows.Forms.ComboBox()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.RMPbtn = New System.Windows.Forms.Button()
+        Me.RMFbtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -158,14 +159,23 @@ Partial Class GesPiezas
         Me.NPBox.Size = New System.Drawing.Size(252, 24)
         Me.NPBox.TabIndex = 14
         '
-        'Button4
+        'RMPbtn
         '
-        Me.Button4.Location = New System.Drawing.Point(462, 13)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(82, 26)
-        Me.Button4.TabIndex = 15
-        Me.Button4.Text = "Regresar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.RMPbtn.Location = New System.Drawing.Point(462, 13)
+        Me.RMPbtn.Name = "RMPbtn"
+        Me.RMPbtn.Size = New System.Drawing.Size(82, 26)
+        Me.RMPbtn.TabIndex = 15
+        Me.RMPbtn.Text = "Regresar"
+        Me.RMPbtn.UseVisualStyleBackColor = True
+        '
+        'RMFbtn
+        '
+        Me.RMFbtn.Location = New System.Drawing.Point(462, 12)
+        Me.RMFbtn.Name = "RMFbtn"
+        Me.RMFbtn.Size = New System.Drawing.Size(82, 26)
+        Me.RMFbtn.TabIndex = 16
+        Me.RMFbtn.Text = "Regresar"
+        Me.RMFbtn.UseVisualStyleBackColor = True
         '
         'GesPiezas
         '
@@ -173,7 +183,8 @@ Partial Class GesPiezas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(556, 450)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.RMFbtn)
+        Me.Controls.Add(Me.RMPbtn)
         Me.Controls.Add(Me.NPBox)
         Me.Controls.Add(Me.DesBox)
         Me.Controls.Add(Me.Button3)
@@ -209,5 +220,6 @@ Partial Class GesPiezas
     Friend WithEvents Button3 As Button
     Friend WithEvents DesBox As ComboBox
     Friend WithEvents NPBox As ComboBox
-    Friend WithEvents Button4 As Button
+    Friend WithEvents RMPbtn As Button
+    Friend WithEvents RMFbtn As Button
 End Class

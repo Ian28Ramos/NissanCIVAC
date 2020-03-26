@@ -7,15 +7,16 @@ Public Class GesPiezas
     Dim DA As MySqlDataAdapter
     Dim DS As DataSet
     Dim lista As Byte
+    Public Ori As String
 
     Private Sub GesPiezas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PBOX()
         OBOX()
-        'DBOX()
         MBOX()
+        Defbtn()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles RMPbtn.Click
         MenuPrincipal.Show()
         Me.Hide()
     End Sub
@@ -41,17 +42,6 @@ Public Class GesPiezas
         OriBox.DisplayMember = "ID_Origen"
         OriBox.Text = "<Seleccione una opción>"
     End Sub
-
-    'Private Sub DBOX()
-    '    ComSql = "SELECT Descripcion FROM Piezas"
-    '    DA = New MySqlDataAdapter(ComSql, F.Conn)
-    '    DS = New DataSet
-    '    DA.Fill(DS, "Piezas")
-
-    '    DesBox.DataSource = DS.Tables(0)
-    '    DesBox.DisplayMember = "Descripcion"
-    '    DesBox.Text = "<Seleccione una opción>"
-    'End Sub
 
     Private Sub MBOX()
         ComSql = "SELECT ID_Divisa FROM Divisas"
@@ -158,4 +148,18 @@ Public Class GesPiezas
         Eliminar()
     End Sub
 
+    Private Sub Defbtn()
+        If Ori = "MP" Then
+            RMPbtn.Visible = True
+            RMFbtn.Visible = False
+        ElseIf Ori = "MF" Then
+            RMPbtn.Visible = False
+            RMFbtn.Visible = True
+        End If
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles RMFbtn.Click
+        MenuFinan.Show()
+        Me.Hide()
+    End Sub
 End Class

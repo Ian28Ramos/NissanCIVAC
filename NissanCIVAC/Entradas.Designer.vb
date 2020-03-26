@@ -34,19 +34,20 @@ Partial Class Entradas
         Me.NoParte = New System.Windows.Forms.ComboBox()
         Me.TiDa = New System.Windows.Forms.ComboBox()
         Me.Prioridad = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.RMPbtn = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ArRe = New System.Windows.Forms.ComboBox()
         Me.Capturar = New System.Windows.Forms.Button()
         Me.Consulta = New System.Windows.Forms.Button()
         Me.Editar = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Fecha = New System.Windows.Forms.TextBox()
         Me.Limpiar = New System.Windows.Forms.Button()
         Me.Desc = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.NomArea = New System.Windows.Forms.TextBox()
+        Me.MC = New System.Windows.Forms.MonthCalendar()
+        Me.RMMbtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -160,15 +161,15 @@ Partial Class Entradas
         Me.Prioridad.Size = New System.Drawing.Size(199, 24)
         Me.Prioridad.TabIndex = 12
         '
-        'Button1
+        'RMPbtn
         '
-        Me.Button1.Location = New System.Drawing.Point(775, 13)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 28)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Regresar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.RMPbtn.Location = New System.Drawing.Point(775, 13)
+        Me.RMPbtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.RMPbtn.Name = "RMPbtn"
+        Me.RMPbtn.Size = New System.Drawing.Size(100, 28)
+        Me.RMPbtn.TabIndex = 15
+        Me.RMPbtn.Text = "Regresar"
+        Me.RMPbtn.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -235,12 +236,6 @@ Partial Class Entradas
         Me.Label9.TabIndex = 22
         Me.Label9.Text = "Descripción:"
         '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(491, 96)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 23
-        '
         'Fecha
         '
         Me.Fecha.Location = New System.Drawing.Point(557, 65)
@@ -282,25 +277,43 @@ Partial Class Entradas
         Me.NomArea.Size = New System.Drawing.Size(199, 22)
         Me.NomArea.TabIndex = 28
         '
+        'MC
+        '
+        Me.MC.Location = New System.Drawing.Point(491, 93)
+        Me.MC.MaxSelectionCount = 1
+        Me.MC.Name = "MC"
+        Me.MC.TabIndex = 30
+        '
+        'RMMbtn
+        '
+        Me.RMMbtn.Location = New System.Drawing.Point(775, 13)
+        Me.RMMbtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.RMMbtn.Name = "RMMbtn"
+        Me.RMMbtn.Size = New System.Drawing.Size(100, 28)
+        Me.RMMbtn.TabIndex = 31
+        Me.RMMbtn.Text = "Regresar"
+        Me.RMMbtn.UseVisualStyleBackColor = True
+        '
         'Entradas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(907, 512)
         Me.ControlBox = False
+        Me.Controls.Add(Me.RMMbtn)
+        Me.Controls.Add(Me.MC)
         Me.Controls.Add(Me.NomArea)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Desc)
         Me.Controls.Add(Me.Limpiar)
         Me.Controls.Add(Me.Fecha)
-        Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Editar)
         Me.Controls.Add(Me.Consulta)
         Me.Controls.Add(Me.Capturar)
         Me.Controls.Add(Me.ArRe)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.RMPbtn)
         Me.Controls.Add(Me.Prioridad)
         Me.Controls.Add(Me.TiDa)
         Me.Controls.Add(Me.NoParte)
@@ -333,17 +346,18 @@ Partial Class Entradas
     Friend WithEvents NoParte As ComboBox
     Friend WithEvents TiDa As ComboBox
     Friend WithEvents Prioridad As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents RMPbtn As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents ArRe As ComboBox
     Friend WithEvents Capturar As Button
     Friend WithEvents Consulta As Button
     Friend WithEvents Editar As Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Fecha As TextBox
     Friend WithEvents Limpiar As Button
     Friend WithEvents Desc As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents NomArea As TextBox
+    Friend WithEvents MC As MonthCalendar
+    Friend WithEvents RMMbtn As Button
 End Class

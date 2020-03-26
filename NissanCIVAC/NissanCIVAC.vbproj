@@ -90,6 +90,18 @@
     <Compile Include="GesPiezas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MenuFinan.Designer.vb">
+      <DependentUpon>MenuFinan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuFinan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuMM.Designer.vb">
+      <DependentUpon>MenuMM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuMM.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VaGlo.vb" />
     <Compile Include="Reportes.Designer.vb">
       <DependentUpon>Reportes.vb</DependentUpon>
@@ -140,6 +152,12 @@
   <ItemGroup>
     <EmbeddedResource Include="GesPiezas.resx">
       <DependentUpon>GesPiezas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFinan.resx">
+      <DependentUpon>MenuFinan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuMM.resx">
+      <DependentUpon>MenuMM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.vb</DependentUpon>

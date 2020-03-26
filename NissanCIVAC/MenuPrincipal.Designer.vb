@@ -37,7 +37,7 @@ Partial Class MenuPrincipal
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(111, 64)
+        Me.Label1.Location = New System.Drawing.Point(131, 47)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(291, 53)
@@ -47,18 +47,18 @@ Partial Class MenuPrincipal
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(13, 187)
+        Me.Button1.Location = New System.Drawing.Point(39, 187)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(169, 28)
+        Me.Button1.Size = New System.Drawing.Size(116, 28)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Capturar/Editar"
+        Me.Button1.Text = "Entradas"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(13, 223)
+        Me.Button2.Location = New System.Drawing.Point(210, 187)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(117, 28)
@@ -79,7 +79,7 @@ Partial Class MenuPrincipal
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(12, 329)
+        Me.Button4.Location = New System.Drawing.Point(276, 264)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(207, 34)
@@ -90,7 +90,7 @@ Partial Class MenuPrincipal
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(12, 258)
+        Me.Button5.Location = New System.Drawing.Point(366, 186)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(117, 29)
         Me.Button5.TabIndex = 7
@@ -101,7 +101,7 @@ Partial Class MenuPrincipal
         '
         Me.Usutxt.AutoSize = True
         Me.Usutxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Usutxt.Location = New System.Drawing.Point(233, 131)
+        Me.Usutxt.Location = New System.Drawing.Point(272, 111)
         Me.Usutxt.Name = "Usutxt"
         Me.Usutxt.Size = New System.Drawing.Size(0, 20)
         Me.Usutxt.TabIndex = 8
@@ -109,7 +109,7 @@ Partial Class MenuPrincipal
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(12, 293)
+        Me.Button6.Location = New System.Drawing.Point(39, 269)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(207, 29)
         Me.Button6.TabIndex = 9
@@ -120,7 +120,7 @@ Partial Class MenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(538, 400)
+        Me.ClientSize = New System.Drawing.Size(549, 363)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Usutxt)

@@ -6,16 +6,19 @@ Public Class Salidas
     Dim DS As DataSet
     Dim ComSql As String
     Dim lista As Byte
+    Public Ori As String
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Defbtn()
         BoxREC()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles RMPbtn.Click
         MenuPrincipal.Show()
         Me.Hide()
     End Sub
 
     Private Sub Capturar()
+        CapDate()
         If Cap.Text <> "" And SalBox.Text <> "" And RECBox.Text <> "" And TiSaBox.Text <> "" And CantBox.Text <> "" And FechaBox.Text <> "" Then
             ComSql = "INSERT INTO Salidas (ID_Salida, ID_Entrada, Tipo_Salida, Cantidad_Salida, Fecha) 
                     VALUES
@@ -87,4 +90,24 @@ Public Class Salidas
         CantBox.Text = ""
         FechaBox.Text = ""
     End Sub
+
+    Public Sub CapDate()
+        FechaBox.Text = MC.SelectionRange.Start.ToString("yyyy/MM/dd")
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles RMMbtn.Click
+        MenuMM.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Defbtn()
+        If Ori = "MP" Then
+            RMPbtn.Visible = True
+            RMMbtn.Visible = False
+        ElseIf Ori = "MM" Then
+            RMPbtn.Visible = False
+            RMMbtn.Visible = True
+        End If
+    End Sub
+
 End Class

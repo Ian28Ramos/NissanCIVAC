@@ -29,15 +29,16 @@ Partial Class Salidas
         Me.CantBox = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TiSaBox = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.RMPbtn = New System.Windows.Forms.Button()
         Me.Cap = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.FechaBox = New System.Windows.Forms.TextBox()
         Me.Cons = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.RECBox = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.MC = New System.Windows.Forms.MonthCalendar()
+        Me.RMMbtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -103,20 +104,20 @@ Partial Class Salidas
         Me.TiSaBox.TabIndex = 5
         Me.TiSaBox.Text = "<Seleccione  una opción>"
         '
-        'Button1
+        'RMPbtn
         '
-        Me.Button1.Location = New System.Drawing.Point(361, 13)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 28)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Regresar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.RMPbtn.Location = New System.Drawing.Point(646, 13)
+        Me.RMPbtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.RMPbtn.Name = "RMPbtn"
+        Me.RMPbtn.Size = New System.Drawing.Size(100, 28)
+        Me.RMPbtn.TabIndex = 6
+        Me.RMPbtn.Text = "Regresar"
+        Me.RMPbtn.UseVisualStyleBackColor = True
         '
         'Cap
         '
         Me.Cap.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cap.Location = New System.Drawing.Point(46, 361)
+        Me.Cap.Location = New System.Drawing.Point(46, 296)
         Me.Cap.Margin = New System.Windows.Forms.Padding(4)
         Me.Cap.Name = "Cap"
         Me.Cap.Size = New System.Drawing.Size(124, 37)
@@ -128,30 +129,23 @@ Partial Class Salidas
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(42, 268)
+        Me.Label4.Location = New System.Drawing.Point(452, 81)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 20)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Fecha:"
         '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(132, 309)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(259, 22)
-        Me.DateTimePicker1.TabIndex = 9
-        '
         'FechaBox
         '
-        Me.FechaBox.Location = New System.Drawing.Point(165, 266)
+        Me.FechaBox.Location = New System.Drawing.Point(522, 79)
         Me.FechaBox.Name = "FechaBox"
-        Me.FechaBox.Size = New System.Drawing.Size(226, 22)
+        Me.FechaBox.Size = New System.Drawing.Size(224, 22)
         Me.FechaBox.TabIndex = 10
         '
         'Cons
         '
         Me.Cons.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cons.Location = New System.Drawing.Point(177, 361)
+        Me.Cons.Location = New System.Drawing.Point(177, 295)
         Me.Cons.Name = "Cons"
         Me.Cons.Size = New System.Drawing.Size(128, 38)
         Me.Cons.TabIndex = 11
@@ -182,28 +176,46 @@ Partial Class Salidas
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(311, 359)
+        Me.Button2.Location = New System.Drawing.Point(311, 293)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(128, 40)
         Me.Button2.TabIndex = 14
         Me.Button2.Text = "Limpiar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'MC
+        '
+        Me.MC.Location = New System.Drawing.Point(456, 126)
+        Me.MC.MaxSelectionCount = 1
+        Me.MC.Name = "MC"
+        Me.MC.TabIndex = 15
+        '
+        'RMMbtn
+        '
+        Me.RMMbtn.Location = New System.Drawing.Point(646, 13)
+        Me.RMMbtn.Margin = New System.Windows.Forms.Padding(4)
+        Me.RMMbtn.Name = "RMMbtn"
+        Me.RMMbtn.Size = New System.Drawing.Size(100, 28)
+        Me.RMMbtn.TabIndex = 16
+        Me.RMMbtn.Text = "Regresar"
+        Me.RMMbtn.UseVisualStyleBackColor = True
+        '
         'Salidas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(474, 439)
+        Me.ClientSize = New System.Drawing.Size(810, 387)
         Me.ControlBox = False
+        Me.Controls.Add(Me.RMMbtn)
+        Me.Controls.Add(Me.MC)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.RECBox)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Cons)
         Me.Controls.Add(Me.FechaBox)
-        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Cap)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.RMPbtn)
         Me.Controls.Add(Me.TiSaBox)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.CantBox)
@@ -226,13 +238,14 @@ Partial Class Salidas
     Friend WithEvents CantBox As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents TiSaBox As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents RMPbtn As Button
     Friend WithEvents Cap As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents FechaBox As TextBox
     Friend WithEvents Cons As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents RECBox As ComboBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents MC As MonthCalendar
+    Friend WithEvents RMMbtn As Button
 End Class

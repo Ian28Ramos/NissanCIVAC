@@ -7,14 +7,15 @@ Public Class Entradas
     Dim DS As DataSet
     Dim ComSql As String
     Dim lista As Byte
-
+    Public Ori As String
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Defbtn()
         BoxArea()
         BoxParte()
     End Sub
 
-    Private Sub Button1_MouseCaptureChanged(sender As Object, e As EventArgs) Handles Button1.MouseCaptureChanged
+    Private Sub Button1_MouseCaptureChanged(sender As Object, e As EventArgs) Handles RMPbtn.MouseCaptureChanged
         MenuPrincipal.Show()
         Me.Hide()
     End Sub
@@ -57,6 +58,7 @@ Public Class Entradas
     End Sub
 
     Private Sub Ingresar() 'Procedimeinto que se encarga de llenar la base de datos
+        CapDate()
         If Cap.Text <> "" And Cantidad.Text <> "" And NoParte.Text <> "" And TiDa.Text <> "" And Prioridad.Text <> "" And ArRe.Text <> "" And Desc.Text <> "" And Fecha.Text <> "" Then
             ComSql = "INSERT INTO Entradas (ID_Entrada, ID_Pieza, Falla, Fecha, Descripcion, Prioridad, Cantidad_Entrada, Responsable) 
                     VALUES
@@ -81,6 +83,7 @@ Public Class Entradas
 
     Private Sub Actualizar() 'Proceso que edita los valores dentro de la BD por medio de la Primary key
         Try
+            CapDate()
             If Cap.Text <> "" And Cantidad.Text <> "" And NoParte.Text <> "" And TiDa.Text <> "" And Prioridad.Text <> "" And ArRe.Text <> "" And Desc.Text <> "" And Fecha.Text <> "" Then
                 ComSql = "UPDATE Entradas SET ID_PIeza='" & NoParte.Text & "', Falla='" & TiDa.Text & "', Fecha='" & Fecha.Text & "', Descripcion='" & Desc.Text & "', Prioridad='" & Prioridad.Text & "', Cantidad_Entrada=" & Cantidad.Text & ", Responsable='" & ArRe.Text & "' WHERE ID_Entrada='" & Cap.Text & "'"
                 Dim READER As MySqlDataReader
@@ -201,6 +204,25 @@ Public Class Entradas
         NoParte.DataSource = DS.Tables(0)
         NoParte.DisplayMember = "ID_Pieza"
         NoParte.Text = "<Seleccione una opción>"
+    End Sub
+
+    Public Sub CapDate()
+        Fecha.Text = MC.SelectionRange.Start.ToString("yyyy/MM/dd")
+    End Sub
+
+    Private Sub Defbtn()
+        If Ori = "MP" Then
+            RMPbtn.Visible = True
+            RMMbtn.Visible = False
+        ElseIf Ori = "MM" Then
+            RMPbtn.Visible = False
+            RMMbtn.Visible = True
+        End If
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles RMMbtn.Click
+        MenuMM.Show()
+        Me.Hide()
     End Sub
 
 End Class
