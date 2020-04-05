@@ -1,9 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class VaGlo
 
-    Public StrConexion As String = "Server=127.0.0.1; Database=nissancivac; Uid=root; pwd=1013p362; port=3306"
+    Public StrConexion As String = "Server=127.0.0.1; Database=nissancivac; Uid=NissanUser; pwd=Rxw75GI00Ykm; port=3306"
     Public Conn As New MySqlConnection(StrConexion)
-    Public Us As String
+    Public Us As String 'Variable que guarda el tipo de usuario
 
     Public Sub Conexion() 'conexion a la BD
         Try

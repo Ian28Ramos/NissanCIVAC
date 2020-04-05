@@ -22,13 +22,13 @@ Public Class GesPiezas
     End Sub
 
     Private Sub PBOX()
-        ComSql = "SELECT ID_Pieza FROM Piezas"
+        ComSql = "SELECT No_Pieza FROM Piezas"
         DA = New MySqlDataAdapter(ComSql, F.Conn)
         DS = New DataSet
         DA.Fill(DS, "Piezas")
 
         NPBox.DataSource = DS.Tables(0)
-        NPBox.DisplayMember = "ID_Pieza"
+        NPBox.DisplayMember = "No_Pieza"
         NPBox.Text = "<Seleccione una opción>"
     End Sub
 
@@ -57,7 +57,7 @@ Public Class GesPiezas
     Private Sub Consultar() 'Procedimiento que buscará en la base da datos los registros ingresados
         If NPBox.Text <> "" Then
             F.Conexion()
-            ComSql = "SELECT * FROM Piezas WHERE ID_Pieza='" & NPBox.Text & "'"
+            ComSql = "SELECT * FROM Piezas WHERE No_Pieza='" & NPBox.Text & "'"
             DA = New MySqlDataAdapter(ComSql, F.Conn)
             DS = New DataSet
             DA.Fill(DS, "Piezas")
@@ -88,7 +88,7 @@ Public Class GesPiezas
     Private Sub Capturar()
         If NPBox.Text <> "" And OriBox.Text <> "" And CosBox.Text <> "" And DesBox.Text <> "" And MonBox.Text <> "" Then
 
-            ComSql = "INSERT INTO Piezas (ID_Pieza, Origen, Costo, Descripcion, Moneda) 
+            ComSql = "INSERT INTO Piezas (No_Pieza, Origen, Costo, Descripcion, Moneda) 
                     VALUES
                     ('" & NPBox.Text & "','" & OriBox.Text & "','" & CosBox.Text & "','" & DesBox.Text & "','" & MonBox.Text & "')"
             Dim READER As MySqlDataReader

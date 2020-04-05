@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class LogIn
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class LogIn
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button_Entrar = New System.Windows.Forms.Button()
         Me.Button_Salir = New System.Windows.Forms.Button()
@@ -29,7 +29,6 @@ Partial Class LogIn
         Me.Usuario = New System.Windows.Forms.TextBox()
         Me.Pswd = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -105,22 +104,12 @@ Partial Class LogIn
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(212, 323)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'LogIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(456, 476)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Pswd)
         Me.Controls.Add(Me.Usuario)
@@ -145,5 +134,4 @@ Partial Class LogIn
     Friend WithEvents Usuario As TextBox
     Friend WithEvents Pswd As TextBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
 End Class

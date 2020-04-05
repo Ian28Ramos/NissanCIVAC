@@ -139,7 +139,6 @@ Partial Class Entradas
         Me.NoParte.Name = "NoParte"
         Me.NoParte.Size = New System.Drawing.Size(199, 24)
         Me.NoParte.TabIndex = 10
-        Me.NoParte.Text = "<Selecciona una opción>"
         '
         'TiDa
         '
@@ -192,7 +191,6 @@ Partial Class Entradas
         Me.ArRe.Name = "ArRe"
         Me.ArRe.Size = New System.Drawing.Size(199, 24)
         Me.ArRe.TabIndex = 17
-        Me.ArRe.Text = "<Selecciona una opción>"
         '
         'Capturar
         '

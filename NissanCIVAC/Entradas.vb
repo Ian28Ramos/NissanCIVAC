@@ -40,20 +40,21 @@ Public Class Entradas
             DS = New DataSet
             DA.Fill(DS, "Entradas")
             lista = DS.Tables("Entradas").Rows.Count
+
+            If lista <> 0 Then
+                Cantidad.Text = DS.Tables("Entradas").Rows(0).Item("Cantidad_Entrada")
+                NoParte.Text = DS.Tables("Entradas").Rows(0).Item("ID_Pieza")
+                TiDa.Text = DS.Tables("Entradas").Rows(0).Item("Falla")
+                Prioridad.Text = DS.Tables("Entradas").Rows(0).Item("Prioridad")
+                ArRe.Text = DS.Tables("Entradas").Rows(0).Item("Responsable")
+                Fecha.Text = DS.Tables("Entradas").Rows(0).Item("Fecha")
+                F.Conn.Close()
+            Else
+                MsgBox("No se encontraron resultados")
+                F.Conn.Close()
+            End If
         Else
             MsgBox("Para hacer una consulta es necesario introducir el campo REC")
-        End If
-        If lista <> 0 Then
-            Cantidad.Text = DS.Tables("Entradas").Rows(0).Item("Cantidad_Entrada")
-            NoParte.Text = DS.Tables("Entradas").Rows(0).Item("ID_Pieza")
-            TiDa.Text = DS.Tables("Entradas").Rows(0).Item("Falla")
-            Prioridad.Text = DS.Tables("Entradas").Rows(0).Item("Prioridad")
-            ArRe.Text = DS.Tables("Entradas").Rows(0).Item("Responsable")
-            Fecha.Text = DS.Tables("Entradas").Rows(0).Item("Fecha")
-            F.Conn.Close()
-        Else
-            MsgBox("No se encontraron resultados")
-            F.Conn.Close()
         End If
     End Sub
 
@@ -106,14 +107,15 @@ Public Class Entradas
 
         End Try
     End Sub
+
     Private Sub DescPieza() 'Obtencion de la descripcion de la pieza automaticamente
-        Try
-            If NoParte.Text <> "" And NoParte.Text.Length >= 8 And NoParte.Text <> "<Seleccione una opción>" Then
+        If NoParte.Text <> " " And NoParte.Text.Length <= 15 And NoParte.Text <> "<Seleccione una opción>" Then
+            Try
                 If F.Conn.Equals(0) Then
                     F.Conn.Open()
                 End If
 
-                ComSql = "SELECT Descripcion FROM Piezas WHERE ID_Pieza='" & NoParte.Text & "'"
+                ComSql = "SELECT Descripcion FROM Piezas WHERE No_Pieza='" & NoParte.Text & "'"
                 DA = New MySqlDataAdapter(ComSql, F.Conn)
                 DS = New DataSet
                 DA.Fill(DS, "Piezas")
@@ -126,12 +128,12 @@ Public Class Entradas
                     MsgBox("Verifique el número de pieza")
                     F.Conn.Close()
                 End If
-            Else
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
 
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        End If
     End Sub
 
     Private Sub Limpiar_Click(sender As Object, e As EventArgs) Handles Limpiar.Click 'Borra el contenido de los TextBox
@@ -167,7 +169,7 @@ Public Class Entradas
                     NomArea.Text = DS.Tables("Areas").Rows(0).Item("Nombre_Area")
                     F.Conn.Close()
                 Else
-                    MsgBox("Error")
+                    MsgBox("Verifique el Id del área")
                     F.Conn.Close()
                 End If
 
@@ -195,14 +197,14 @@ Public Class Entradas
         ArRe.Text = "<Seleccione una opción>"
     End Sub
 
-    Private Sub BoxParte()
-        ComSql = "SELECT ID_Pieza FROM Piezas"
+    Private Sub BoxParte() 'Llena el combobox con la base de datos
+        ComSql = "SELECT No_Pieza FROM Piezas"
         DA = New MySqlDataAdapter(ComSql, F.Conn)
         DS = New DataSet
         DA.Fill(DS, "Piezas")
 
         NoParte.DataSource = DS.Tables(0)
-        NoParte.DisplayMember = "ID_Pieza"
+        NoParte.DisplayMember = "No_Pieza"
         NoParte.Text = "<Seleccione una opción>"
     End Sub
 
@@ -210,7 +212,7 @@ Public Class Entradas
         Fecha.Text = MC.SelectionRange.Start.ToString("yyyy/MM/dd")
     End Sub
 
-    Private Sub Defbtn()
+    Private Sub Defbtn() 'Define el form origen
         If Ori = "MP" Then
             RMPbtn.Visible = True
             RMMbtn.Visible = False

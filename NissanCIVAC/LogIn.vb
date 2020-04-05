@@ -10,7 +10,6 @@ Public Class LogIn
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_Entrar.Click
-        F.Conexion()
         NomUsuario()
         Validar()
     End Sub
@@ -29,7 +28,8 @@ Public Class LogIn
 
         Try
             If Usuario.Text <> "" And Pswd.Text <> "" Then
-                sql = "SELECT * FROM Usuarios WHERE ID_Usuario='" & Usuario.Text & "' AND Pswrds= '" & Pswd.Text & "'"
+                F.Conexion()
+                sql = "SELECT * FROM Usuarios WHERE ID_Usuario='" & Usuario.Text & "' AND Contrasena= '" & Pswd.Text & "'"
                 DA = New MySqlDataAdapter(sql, F.Conn)
                 DS = New DataSet
                 DA.Fill(DS, "Usuarios")
@@ -55,11 +55,6 @@ Public Class LogIn
         Catch ex As Exception
             MsgBox("El usuario o la contraseña son incorrectos")
         End Try
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        MenuPrincipal.Show()
-        Me.Hide()
     End Sub
 
     Public Sub NomUsuario() 'Asigna valor para identificar usuario
